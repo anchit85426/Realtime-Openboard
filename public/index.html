@@ -1,0 +1,47 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Openboard_Clone</title>
+
+</head>
+<body>
+    <div class="options-cont">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="tools-cont scale-tools">
+        <img class="pencil" src="Icons\Pencil.svg" >
+        <img class="erase"  src="Icons\Eraser.svg">
+        <img class="download" src="Icons\Download.svg">
+        <img class="upload" src="Icons\Upload.svg" alt="">
+        <img class="stickynote" src="Icons\StickyNote.svg">
+        <img class="redo" src="Icons\Redo.svg">
+        <img class="undo" src="Icons\Undo.svg">
+    </div>
+    <div class="pencil-tool-cont">
+        <div class="pencil-width-cont">
+            <input type="range" min="2" max="10" value="3" class="pencil-width">
+
+        </div>
+        <div class="pencil-color-cont">
+            <div class="black pencil-color"></div>
+            <div class="red pencil-color"></div>
+            <div class="blue pencil-color"></div>
+
+        </div>
+    </div>
+    <div class="erase-tool-cont">
+        <input type="range" min="2" max="10" value="3" class="erase-width">
+    </div>
+    <canvas></canvas>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io();
+    </script>
+    <script src="./tools.js"></script>
+    <script src="./canvas.js"></script>
+</body>
+</html>
